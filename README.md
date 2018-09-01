@@ -5,10 +5,6 @@
 
 Simple. Secure. Reliable messaging. With WhatsApp, you'll get fast, simple, secure messaging and calling for free*, available on phones all over the world.
 
-## Download For Linux
-
-[Linux Packages](https://github.com/kerrongordon/whatsapp-linux/releases/latest)
-
 ## How To Use
 
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com)
