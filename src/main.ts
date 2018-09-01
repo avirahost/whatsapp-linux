@@ -10,7 +10,8 @@ require('electron-context-menu')({
 let mainWindow: Electron.BrowserWindow
 const appURL = 'https://web.whatsapp.com/'
 const appName = 'WhatsApp linux'
-const bgColor = '#f2f2f2'
+const bgColor = '#080808'
+const fs = require('fs')
 
 const createWindow = () => {
   mainWindow = new BrowserWindow({
@@ -22,6 +23,14 @@ const createWindow = () => {
 
   mainWindow.loadURL(appURL)
   mainWindow.setTitle(appName)
+  mainWindow.webContents.on('did-finish-load', function() {
+  	fs.readFile(__dirname+ '/stylo.css', "utf-8", function(error:any, data:any) {
+		if(!error){
+			var formatedData = data.replace(/\s{2,10}/g, ' ').trim()
+			mainWindow.webContents.insertCSS(formatedData)
+		}
+	})
+  })
   mainWindow.setMenuBarVisibility(false)
   mainWindow.setAutoHideMenuBar(true)
 }
