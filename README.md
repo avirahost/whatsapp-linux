@@ -11,7 +11,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/kerrongordon/whatsapp-linux.git
+git clone https://github.com/avirahost/whatsapp-linux.git
 # Go into the repository
 cd whatsapp-linux
 # Install dependencies
